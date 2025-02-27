@@ -26,6 +26,8 @@ class Post extends Model
     {
         return Attribute::make(
             get: fn ($image) => url('/storage/posts/' . $image),
+            //menggunakan accessor : domain.com/storage/posts/nama_file_image.png
+            //tidak menggunakan : nama_file_image.png
         );
     }
 }
